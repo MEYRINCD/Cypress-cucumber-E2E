@@ -39,4 +39,4 @@ jobs:
               with:
                   name: cucumber-report
                   path: ./reports/cucumber-htmlreport
-                  retention-days: 5
+                  retention-days: 3
