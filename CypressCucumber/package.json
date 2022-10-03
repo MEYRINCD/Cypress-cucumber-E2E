@@ -1,0 +1,28 @@
+{
+  "name": "cypresscucumber",
+  "version": "1.0.0",
+  "description": "Testing with Cypress plus cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "npx cypress run",
+    "cypress:report": "node cucumber-html-report.js"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "Vlad",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@cucumber/cucumber": "^8.6.0",
+    "cypress": "^10.9.0",
+    "esbuild": "^0.15.10",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.7.1"
+  }
+}
