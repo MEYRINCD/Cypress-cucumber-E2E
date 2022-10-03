@@ -1,30 +1,23 @@
 
-name: Cypress+Cucumber E2E
-
+name: Cypress-Cucumber E2E
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    push:
+        branches: [master]
 jobs:
-  build:
-
-    runs-on: windows-latest
-
-    strategy:
-      matrix:
-        node-version: [14.17.0]
-    
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: update node manager
+    Run_test:
+        runs-on: windows-latest
+        strategy:
+            matrix:
+                node-version: [14.17.0]
+              
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  # cache: "npm"
+            - name: update node manager
               run: npm i npm@latest
             - name: install all dependencies
               run: npm i
